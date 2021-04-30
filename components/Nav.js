@@ -77,7 +77,7 @@ export default function (props) {
           style={[styles.nav, {
               borderBottomWidth: props.theme === 'light' && (props.isScrolled || (view.indexOf('/biz') === 0 && props.isScrolled)) ? 2 : 0,
               borderColor: Theme.green,
-              backgroundColor: props.theme == 'light' ? '#fff' : 'transparent'
+              backgroundColor: props.theme == 'light' ? '#fff' : 'transparent',
             }]} >
             {props.theme === 'dark' && <Animated.View
                 style={{
@@ -87,9 +87,9 @@ export default function (props) {
                     opacity: fadeAnim
                 }}/>
             }
-            <View style={{ padding: 20, flex: 1, alignContent: 'center', borderRightWidth: 2, borderColor: props.theme == 'light' ? Theme.green : '#fff' }}>
+            <View style={{padding: 20, flex: 1, alignContent: 'center', borderRightWidth: 2, borderColor: props.theme == 'light' ? Theme.green : '#fff' }}>
                 <Link href="/" fill>
-                    <View style={{ height: '100%' }}>
+                    <View style={{height: '100%'}}>
                         {props.theme == 'light' ?
                             <HybridImage
                                 style={{ width: dimensions.width < 1100 ? '100%' : 200, flex: 1, resizeMode: 'contain' }}

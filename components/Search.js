@@ -137,6 +137,8 @@ const Search = ({
         justifyContent: "center",
         width: "100%",
         minHeight: includeUseLocationOption ? 140 : 0
+        // maxHeight: '75%'
+        // backgroundColor: 'red'
       }}
     >
       <View
@@ -146,7 +148,9 @@ const Search = ({
           flexDirection: "row",
           alignItems: "center",
           maxWidth: mode === "results" ? "100%" : 840,
-          marginRight: 10
+          marginRight: 10,
+          // maxHeight: '75%',
+          // backgroundColor: 'red'
         }}
       >
         <View
@@ -160,13 +164,15 @@ const Search = ({
             backgroundColor: "#fff",
             borderRadius: 40,
             paddingTop: 6,
-            paddingBottom: 6
+            // paddingBottom: 6,
+            // backgroundColor: 'red'
           }}
         >
           <View
             style={{
               flex: 2,
-              marginLeft: 25
+              marginLeft: 25,
+              // backgroundColor: 'red'
             }}
           >
             {!small && (
@@ -200,7 +206,8 @@ const Search = ({
               height: 48,
               borderColor: "rgba(0, 0, 0, 0.5)",
               marginLeft: 15,
-              marginRight: 15
+              marginRight: 15,
+              // backgroundColor: 'red'
             }}
           />
           <View
@@ -208,12 +215,14 @@ const Search = ({
               flex: 4,
               marginRight: 10,
               flexDirection: "row",
-              alignItems: "center"
+              alignItems: "center",
+              // backgroundColor: 'red'
             }}
           >
             <View
               style={{
-                flex: 1
+                flex: 1,
+                // backgroundColor: 'red'
               }}
             >
               {!small && (
@@ -254,7 +263,8 @@ const Search = ({
                   style={{
                     backgroundColor: Theme.green_bg,
                     borderRadius: 40,
-                    padding: 10
+                    padding: 10,
+                    // backgroundColor: 'red'
                   }}
                 >
                   <FontAwesome name="search" size={24} color="#fff" />
@@ -269,7 +279,9 @@ const Search = ({
                     alignItems: "center",
                     justifyContent: "center",
                     paddingLeft: 20,
-                    paddingRight: 20
+                    paddingRight: 20,
+                    // maxHeight: '10%'
+                    // backgroundColor: 'red'
                   }}
                 >
                   <FontAwesome name="search" size={24} color="black" />
@@ -298,7 +310,8 @@ const Search = ({
               flex: tablet ? 0.25 : 0.3,
               flexDirection: tablet ? "column" : "row",
               alignItems: "center",
-              justifyContent: "center"
+              justifyContent: "center",
+              // backgroundColor: 'red'
             }}
           >
             <Text
@@ -315,7 +328,7 @@ const Search = ({
             >
               Sort By:
             </Text>
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1}}>
               <Picker
                 style={{ width: "min-content" }}
                 selectedValue={sortOption}

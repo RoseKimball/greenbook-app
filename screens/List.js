@@ -115,10 +115,18 @@ json output to console to convert to a table to act as an export for people that
         <View style={[ dimensions.width >= 800 ? { width: 'calc(50% - 1px)' } : 
         { padding: 20, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', zIndex: 1, backgroundColor: '#fff', width: '100%'}, isWeb && {position: 'fixed', padding: 20, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', zIndex: 1, backgroundColor: '#fff'}]}>
             
-            <Text style={[styles.text_header3, {marginBottom: 20}]}>
+            {/* <Text style={[styles.text_header3, {marginBottom: 20}]}>
                 {filteredList.length === 1 ? '1 Black-Owned Business' : filteredList.length + ' Black-Owned Businesses'}
-            </Text>
-            {!viewMode && <Search mode="results" city={city} state={state} sortOption={sortOption} handleSortChange={handleSortChange}/> }
+            </Text> */}
+            {!viewMode && <Search style={{paddingBottom: 0, marginBottom: 0}} mode="results" city={city} state={state} sortOption={sortOption} handleSortChange={handleSortChange}/> }
+            
+            <View>
+                <Text style={[styles.text_header4, {color: 'black'}]}>All Results:</Text>
+                <Text style={[styles.text_header3, {marginBottom: 20, fontSize: '30px'}]}>
+                    {filteredList.length === 1 ? '1 Black-Owned Business' : filteredList.length + ' Black-Owned Businesses'}
+                </Text>
+            </View>
+            
          </View>
     )
 
@@ -162,6 +170,6 @@ json output to console to convert to a table to act as an export for people that
                 : <NativeList />
 }
 
-const styles = StyleSheet.create(getStyles('text_header3, section, content'));
+const styles = StyleSheet.create(getStyles('text_body, text_header4, text_body2, text_header3, section, content'));
 
 export default Page;
